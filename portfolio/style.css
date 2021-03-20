@@ -6,7 +6,7 @@
 }
 header {
 	width:100%;
-	height:70px;
+	height:50px;
 	position:fixed;
 	background-color:#fff;
 	z-index:99999;
@@ -15,7 +15,7 @@ header {
 header h1 {
 	display: inline-block;
 	float: left;
-	padding:15px 15px;
+	padding:5px 15px;
 	text-transform: uppercase;
 }
 header h1 a {
@@ -30,7 +30,7 @@ header ul {
 
 }
 header ul li {
-	padding:24px;
+	padding:15px;
 	display: inline-block;
 
 }
@@ -56,7 +56,7 @@ a {
 .mobile-menu {
 	float: right;
 	display: none;
-	padding:18px;
+	padding:9px;
 }
 .mobile-menu:hover {
 	cursor: pointer;
@@ -66,10 +66,10 @@ a {
 }
 .sidebar {
 	position: fixed;
-	top: 70px;
+	top: 50px;
 	bottom: 0;
-	left: -300px;
-	width:300px;
+	right: -300px;
+	width:200px;
 	background-color: rgba(16, 47, 80, .9);
 	transition: .3s;
 	z-index: 9999;
@@ -77,16 +77,18 @@ a {
 .sidebar ul li a {
 	color: #fff;
 }
+
 .sidebar ul li {
 	padding:24px;
 	transition: .3s;
 	transition-property: background-color;
+	display:block;
 }
 .sidebar ul li:hover {
 	background-color: #61c4d4;
 }
 #check:checked ~ .sidebar {
-	left: 0;
+	right: 0;
 }
 #banner {	
 	background-color: #1faaf1;
@@ -100,7 +102,13 @@ section {
 	border-radius: 10px;
 	box-shadow: 0 3px 5px #ddd;
 	margin: 50px 0;
+	transition:.3s;
 }
+
+#banner a:hover img {
+	transform:scale(1.2);
+}
+
 #banner h2,
 #banner p,
 #banner span {
@@ -154,30 +162,8 @@ section h3::after {
 #contact {
 	background-color: #f9f9f9;
 }
-#skills .bar {
-	height: 22px;
-	background-color: #fff;
-	border:1px solid #ccc;
-	margin: 5px 0 20px 0;
-}
-.bar .nilai {
-	height:22px;
-	background-color: #61c4d4;
-	display: inline-block;
-	color: #fff;
-	text-align: center;
-}
-.html {
-	width:90%;
-}
-.css {
-	width:85%;
-}
-.js {
-	width:10%;
-}
-.php {
-	width:5%;
+#skills {
+	text-align:center;
 }
 .col-4 {
 	width:25%;
@@ -207,6 +193,19 @@ section h3::after {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 15px;
 }
+
+#skills img {
+	width:50px;
+	padding:5px;
+	text-align: center;
+	margin:0 10px;
+	border:1px solid #000;
+	border-radius:10px;
+	transition:.3s;
+}
+#skills a:hover img {
+	transform:scale(1.2);
+}
 footer {
 	background-color: #333;
 	padding:50px;
@@ -222,13 +221,6 @@ footer small a {
 html {
 	scroll-behavior: smooth;
 }
-
-.to-top {
-	position:fixed;
-	bottom:30px;
-	right:40px;
-}
-
 @media (max-width: 768px){
 	.mobile-menu {
 		display: block;
