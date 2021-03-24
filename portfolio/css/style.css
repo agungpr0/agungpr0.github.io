@@ -6,40 +6,40 @@
 }
 header {
 	width:100%;
-	height:50px;
+	height: 60px;
 	position:fixed;
-	background-color:#fff;
+	background-color: rgba(16, 47, 80, .9);
 	z-index:99999;
-	opacity:.9;
 }
 header h1 {
+  font-weight: bold;
 	display: inline-block;
 	float: left;
-	padding:5px 15px;
+	padding:5px 10px;
 	text-transform: uppercase;
 }
 header h1 a {
+  color: #eee;
 	transition: .3s;
-
 }
 header h1 a:hover {
-	color: #999;
+	color: #bbb;
 }
 header ul {
+  font-weight: bold;
 	float: right;
-
+	padding: 5px;
 }
 header ul li {
-	padding:15px;
+	padding:10px;
 	display: inline-block;
-
 }
 header ul li a {
 	transition: .3s;
-
+	color: #eee;
 }
 header ul li a:hover {
-	color: #999;
+	color: #bbb;
 }
 a {
 	text-decoration: none;
@@ -56,7 +56,7 @@ a {
 .mobile-menu {
 	float: right;
 	display: none;
-	padding:9px;
+	filter: invert();
 }
 .mobile-menu:hover {
 	cursor: pointer;
@@ -66,7 +66,7 @@ a {
 }
 .sidebar {
 	position: fixed;
-	top: 50px;
+	top: 59px;
 	bottom: 0;
 	right: -300px;
 	width:200px;
@@ -131,6 +131,7 @@ section h3 {
 	text-align: center;
 	margin:20px;
 	position: relative;
+	font-weight: bold;
 }
 section h3::before {
 	content:'';
@@ -179,7 +180,16 @@ section h3::after {
 	border:3px solid #eee;
 }
 .col-4 a:hover img {
-	transform: scale(1.1);
+	transform: translateY(-10px);
+	box-shadow:0 10px 10px #777;
+}
+.col-md-3 img {
+	transition:.3s;
+	border:1px solid #777;
+}
+.col-md-3 a:hover img {
+	transform: translateY(-10px);
+	box-shadow:0 10px 10px #777;
 }
 .col-3 {
 	width:33.33%;
@@ -193,25 +203,8 @@ section h3::after {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 15px;
 }
-.col-2 {
-	width:25%;
-	box-sizing: border-box;
-	padding:5px;
-	float: left;
-	text-align: center;
-	margin-bottom: 15px;
-}
-.col-2 img {
-	width:50px;
-	padding:5px;
-	text-align: center;
-	margin:0 5px;
-	border:1px solid #000;
-	border-radius:10px;
-	transition:.3s;
-}
-.col-2 a:hover img {
-	transform: scale(1.2);
+.col-3 a {
+  color: black;
 }
 footer {
 	background-color: #333;
@@ -229,8 +222,12 @@ html {
 	scroll-behavior: smooth;
 }
 @media (max-width: 768px){
+  header h1 {
+    padding: 10px 10px;
+  }
 	.mobile-menu {
 		display: block;
+		padding: 10px;
 	}
 	header ul {
 		display: none;
@@ -240,5 +237,8 @@ html {
 	}
 	.col-3 {
 		width:100%;
+	}
+	.col-md-3 {
+	  width: 50%;
 	}
 }
